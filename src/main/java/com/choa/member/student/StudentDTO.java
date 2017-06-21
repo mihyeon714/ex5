@@ -3,14 +3,15 @@ package com.choa.member.student;
 import com.choa.member.MemberDTO;
 
 public class StudentDTO extends MemberDTO{
-	private int sid;
-	private String phone;
-	private int tid;
 	
-	public int getSid() {
+	private String sid;
+	private String phone;
+	private String tid;
+	
+	public String getSid() {
 		return sid;
 	}
-	public void setSid(int sid) {
+	public void setSid(String sid) {
 		this.sid = sid;
 	}
 	public String getPhone() {
@@ -19,11 +20,13 @@ public class StudentDTO extends MemberDTO{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public int getTid() {
+	public String getTid() {
 		return tid;
 	}
-	public void setTid(int tid) {
+	public void setTid(String tid) {
 		this.tid = tid;
 	}
+	
+	
 	
 }

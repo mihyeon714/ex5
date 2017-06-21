@@ -2,25 +2,25 @@ package com.choa.member;
 
 public class MemberDTO {
 	
-	private int id;
-	private int pw;
+	private String id;
+	private String pw;
 	private String name;
-	private int age;
+	private Integer age;
 	private String grade;
 	private String fileName;
 	private String oriName;
 	
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public int getPw() {
+	public String getPw() {
 		return pw;
 	}
-	public void setPw(int pw) {
+	public void setPw(String pw) {
 		this.pw = pw;
 	}
 	public String getName() {
@@ -29,10 +29,10 @@ public class MemberDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 	public String getGrade() {
@@ -53,6 +53,8 @@ public class MemberDTO {
 	public void setOriName(String oriName) {
 		this.oriName = oriName;
 	}
+	
+	
 	
 
 }
