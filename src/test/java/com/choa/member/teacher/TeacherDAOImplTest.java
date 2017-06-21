@@ -17,7 +17,7 @@ public class TeacherDAOImplTest extends MyAbstractTestUnit {
 	@BeforeClass
 	public static void makeTeacher(){
 		teacherDTO = new TeacherDTO();
-		teacherDTO.setId("IU");
+		teacherDTO.setId("IU2");
 		teacherDTO.setName("아이유");
 		teacherDTO.setAge(25);
 		teacherDTO.setFileName("유이아파일");
@@ -25,7 +25,7 @@ public class TeacherDAOImplTest extends MyAbstractTestUnit {
 		teacherDTO.setGrade("t");
 		teacherDTO.setPw("0000");
 
-		teacherDTO.setTid("IU");
+		teacherDTO.setTid("IU2");
 		teacherDTO.setSubject("MATH");
 	}
 	

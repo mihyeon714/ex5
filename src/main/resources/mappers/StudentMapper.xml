@@ -5,12 +5,6 @@
  
  <mapper namespace="StudentMapper">
  
- 	<!-- insert id=join -->
- 	<insert id="joinMember" parameterType="com.choa.member.student.StudentDTO">
- 		insert into member (id,pw,name,age,grade,fileName,oriName) 
- 		values (#{id},#{pw},#{name},#{age},#{grade},#{fileName},#{oriName})	
- 	</insert>
- 	
  	<insert id="joinStudent" parameterType="com.choa.member.student.StudentDTO">
  		insert into student (sid,phone,tid) values (#{sid},#{phone},#{tid})	
  	</insert>

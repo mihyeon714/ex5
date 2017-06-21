@@ -12,16 +12,16 @@ public class TeacherDAOImpl implements MemberDAO{
 	
 	@Autowired
 	private SqlSession sqlSession;
-	private static final String NAMESPACE = "TeacherMapper.";
+	private final String NAMESPACE = "TeacherMapper.";
+	private final String NAMESPACEMEM = "MemberMapper.";
 	
 	@Override
 	public int memberJoin(MemberDTO memberDTO) throws Exception {
-		
-		TeacherDTO teacherDTO = (TeacherDTO)memberDTO;
-		int result = sqlSession.insert(NAMESPACE+"joinMember",teacherDTO);
+
+		int result = sqlSession.insert(NAMESPACEMEM+"joinMember",memberDTO);
 	
 		if(result > 0){
-			result = sqlSession.insert(NAMESPACE+"joinTeacher", teacherDTO);
+			result = sqlSession.insert(NAMESPACE+"joinTeacher", memberDTO);
 		}
 		
 		return result;

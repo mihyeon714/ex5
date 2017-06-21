@@ -4,16 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="TeacherMapper">
- 	
- 	<insert id="joinMember" parameterType="com.choa.member.teacher.TeacherDTO">
- 		insert into member (id,pw,name,age,grade,fileName,oriName) 
- 		values (#{id},#{pw},#{name},#{age},#{grade},#{fileName},#{oriName})	
- 	</insert>
- 
- 
+
  	<insert id="joinTeacher" parameterType="com.choa.member.teacher.TeacherDTO">
  		insert into teacher (tid,subject,hiredate) values (#{tid},#{subject},sysdate)	
  	</insert>
- 
  
  </mapper>

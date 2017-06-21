@@ -15,16 +15,17 @@ public class StudentDAOImpl implements MemberDAO {
 	
 	@Inject
 	private SqlSession sqlSession;
-	private final static String NAMESPACE="StudentMapper.";
+	private final String NAMESPACE = "StudentMapper.";
+	private final String NAMESPACEMEM = "MemberMapper.";
 	
 
 	@Override
 	public int memberJoin(MemberDTO memberDTO) throws Exception {
-		StudentDTO studentDTO = (StudentDTO)memberDTO;
-		int result = sqlSession.insert(NAMESPACE+"joinMember",studentDTO);
+		
+		int result = sqlSession.insert(NAMESPACEMEM+"joinMember",memberDTO);
 		
 		if( result > 0 ){
-			result = sqlSession.insert(NAMESPACE+"joinStudent",studentDTO);
+			result = sqlSession.insert(NAMESPACE+"joinStudent",memberDTO);
 		}
 		
 		
