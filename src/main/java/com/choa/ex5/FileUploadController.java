@@ -65,10 +65,12 @@ public class FileUploadController {
 		System.out.println("getOriginalFilename = "+fileDTO.getF1().getOriginalFilename()); //올렸을때 이름
 		System.out.println("getSize = "+fileDTO.getF1().getSize());
 		
-		String path = session.getServletContext().getRealPath("resources/upload");
-	
 		FileSaver fs = new FileSaver();
-		fs.filesave(path, fileDTO.getF1().getOriginalFilename(), fileDTO.getF1().getBytes());
+		String realPath = session.getServletContext().getRealPath("resources/upload");
+	
+		fs.filesave(realPath, fileDTO.getF1());
+		
+		
 	}
 	
 	

@@ -75,7 +75,6 @@
 		<!-- Student -->
 		<div id="studentForm">
 			<br/>
-			SID : <input type="text" name="sid"> <br/> <!-- id랑 같아야함 -->
 			PHONE : <input type="text" name="phone"> <br/>
 			TID : <input type="text" name="tid"> <br/>
 		</div>
@@ -83,7 +82,6 @@
 		<!-- Teacher -->
 		<div id="teacherForm">
 			<br/>
-			TID : <input type="text" name="tid"> <br/> <!-- id랑 같아야함 -->
 			SUBJECT : <input type="text" name="subject"> <br/>
 			HIREDATE : <input type="date" name="hireDate"> <br/>
 		</div>

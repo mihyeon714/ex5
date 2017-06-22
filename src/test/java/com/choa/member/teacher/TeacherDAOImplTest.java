@@ -25,7 +25,6 @@ public class TeacherDAOImplTest extends MyAbstractTestUnit {
 		teacherDTO.setGrade("t");
 		teacherDTO.setPw("0000");
 
-		teacherDTO.setTid("IU2");
 		teacherDTO.setSubject("MATH");
 	}
 	

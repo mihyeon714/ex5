@@ -12,4 +12,12 @@
  		values (#{id},#{pw},#{name},#{age},#{grade},#{fileName},#{oriName})	
  	</insert>
  	
+ 	<select id="loginMember" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.MemberDTO">
+ 		select * from 
+ 	<!-- 	<if test="grade=='student'">student</if>
+ 		<if test="grade=='teacher'">teacher</if> -->
+ 		member 
+ 		where id=#{id} and pw=#{pw} and grade=#{grade}
+ 	</select>
+ 	
  </mapper>

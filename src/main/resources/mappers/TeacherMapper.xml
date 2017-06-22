@@ -6,7 +6,15 @@
  <mapper namespace="TeacherMapper">
 
  	<insert id="joinTeacher" parameterType="com.choa.member.teacher.TeacherDTO">
- 		insert into teacher (tid,subject,hiredate) values (#{tid},#{subject},sysdate)	
+ 		insert into teacher (tid,subject,hiredate) values (#{id},#{subject},sysdate)	
  	</insert>
+ 
+ 	<!-- <select id="memberPage" parameterType="java.lang.String" resultType="com.choa.member.teacher.TeacherDTO">
+ 		select * from teacher where tid=#{id}
+ 	</select> -->
+ 	
+ 	<select id="memberLogin" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.teacher.TeacherDTO">
+ 		select M.*,T.* from member M,teacher T where M.id=#{id} and M.pw=#{pw} and M.grade=#{grade} and M.id=T.tid
+ 	</select>
  
  </mapper>

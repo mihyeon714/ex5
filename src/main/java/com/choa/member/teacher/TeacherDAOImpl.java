@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.choa.member.MemberDAO;
 import com.choa.member.MemberDTO;
+import com.choa.member.student.StudentDTO;
 
 @Repository
 public class TeacherDAOImpl implements MemberDAO{
@@ -26,5 +27,17 @@ public class TeacherDAOImpl implements MemberDAO{
 		
 		return result;
 	}
-
+	
+	@Override
+	public MemberDTO memberLogin(MemberDTO memberDTO) throws Exception {
+		//return sqlSession.selectOne(NAMESPACEMEM+"loginMember",memberDTO);	
+		return sqlSession.selectOne(NAMESPACE+"memberLogin", memberDTO);
+	}
+	
+	/*
+	@Override
+	public TeacherDTO memberPage(String id) throws Exception{
+		return sqlSession.selectOne(NAMESPACE+"memberPage",id);
+	}
+	*/
 }

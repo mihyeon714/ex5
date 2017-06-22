@@ -31,7 +31,19 @@ public class StudentDAOImpl implements MemberDAO {
 		
 		return result;
 	}
+
+
+	@Override
+	public MemberDTO memberLogin(MemberDTO memberDTO) throws Exception {
+		//return sqlSession.selectOne(NAMESPACEMEM+"loginMember",memberDTO);
+		return sqlSession.selectOne(NAMESPACE+"memberLogin", memberDTO);
+	}
 	
-	
+	/*
+	@Override
+	public StudentDTO memberPage(String id) throws Exception{
+		return sqlSession.selectOne(NAMESPACE+"memberPage",id);
+	}
+	*/
 
 }
