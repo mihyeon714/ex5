@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ 
+ <mapper namespace="MemberMapper">
+ 	
+ 	<!-- insert id=join -->
+ 	<insert id="joinMember" parameterType="com.choa.member.MemberDTO">
+ 		insert into member (id,pw,name,age,grade,fileName,oriName) 
+ 		values (#{id},#{pw},#{name},#{age},#{grade},#{fileName},#{oriName})	
+ 	</insert>
+ 	
+ 	<select id="loginMember" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.MemberDTO">
+ 		select * from 
+ 	<!-- 	<if test="grade=='student'">student</if>
+ 		<if test="grade=='teacher'">teacher</if> -->
+ 		member 
+ 		where id=#{id} and pw=#{pw} and grade=#{grade}
+ 	</select>
+ 	
+ </mapper>
